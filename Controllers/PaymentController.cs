@@ -23,7 +23,7 @@ public class PaymentController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Run(int? limit = null)
+    public async Task<IActionResult> Run([FromQuery] int? limit = null)
     {
         var jobId = await jobService.CreateJobAsync();
 
